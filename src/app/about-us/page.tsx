@@ -102,10 +102,10 @@ export default function AboutUsPage() {
 
         {/* Real Numbers Banner */}
         <div className="bg-navy-dark text-white rounded-card p-8 sm:p-12 border border-white/10 shadow-floating">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 text-center sm:text-left">
             {COMPANY_INFO.stats.map((stat) => (
               <div key={stat.label} className="space-y-1">
-                <div className="font-serif font-bold text-3xl sm:text-5xl text-gold">
+                <div className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-gold">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-sm text-white/70 font-medium">

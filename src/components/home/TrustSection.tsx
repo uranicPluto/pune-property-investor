@@ -52,13 +52,13 @@ export function TrustSection() {
         </div>
 
         {/* Real Metrics Banner */}
-        <div className="mt-8 pt-8 border-t border-border/60 flex flex-wrap items-center justify-between gap-6 text-center sm:text-left">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-navy">
+        <div className="mt-8 pt-8 border-t border-border/60 flex flex-col xl:flex-row xl:items-center justify-between gap-6 text-center sm:text-left">
+          <div className="flex items-center justify-center sm:justify-start gap-2 text-xs font-semibold uppercase tracking-wider text-navy">
             <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-            <span>Advisory Benchmarks Across Pune Corridors:</span>
+            <span>Trusted by Professionals Across</span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-6 sm:gap-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 xl:flex xl:flex-wrap items-center justify-center sm:justify-start xl:justify-end gap-6 sm:gap-8 lg:gap-10">
             {COMPANY_INFO.stats.map((stat) => (
               <div key={stat.label}>
                 <div className="font-serif font-bold text-2xl sm:text-3xl text-navy">

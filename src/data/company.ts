@@ -50,9 +50,10 @@ export const COMPANY_INFO = {
     "Panchshil Realty",
   ],
   stats: [
-    { label: "Prime Pune Localities", value: "10+" },
-    { label: "Curated Developments", value: "45+" },
-    { label: "Homebuyers & Investors Guided", value: "1,200+" },
-    { label: "Client Recommendation Rate", value: "98%" },
+    { label: "Team Size", value: "200+" },
+    { label: "Happy Clients", value: "20,000+" },
+    { label: "Site Visits", value: "10,000+" },
+    { label: "Sq. Ft Sold Till Date", value: "900,000+" },
+    { label: "Brokerage", value: "0%" },
   ],
 };
