@@ -130,7 +130,7 @@ export function TrendingProjectsSection() {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white border-t border-border/80 relative">
+    <section id="trending" className="scroll-mt-20 py-12 sm:py-16 lg:py-20 bg-white border-t border-border/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <RevealUp className="text-center mb-8 sm:mb-12">

@@ -106,6 +106,10 @@ export const MAIN_NAV_ITEMS: NavItem[] = [
     label: "About",
     href: "/about-us",
   },
+  {
+    label: "Contact",
+    href: "/contact-us",
+  },
 ];
 
 export const FOOTER_LINKS = {

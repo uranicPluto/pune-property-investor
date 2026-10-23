@@ -10,7 +10,7 @@ export function LocationExplorerSection() {
   const supportingLocalities = LOCATIONS.filter((l) => l.slug !== "kharadi").slice(0, 5);
 
   return (
-    <section className="pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-12 lg:pb-24 bg-ivory/60 border-t border-border/80">
+    <section id="locations" className="scroll-mt-20 pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-12 lg:pb-24 bg-ivory/60 border-t border-border/80">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">

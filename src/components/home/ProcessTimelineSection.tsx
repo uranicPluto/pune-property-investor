@@ -4,7 +4,7 @@ import { RevealUp } from "@/components/motion/MotionWrapper";
 
 export function ProcessTimelineSection() {
   return (
-    <section className="py-10 sm:py-14 bg-white border-t border-border/80">
+    <section id="workflow" className="scroll-mt-20 py-10 sm:py-14 bg-white border-t border-border/80">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <RevealUp className="text-center mb-6 sm:mb-8">
