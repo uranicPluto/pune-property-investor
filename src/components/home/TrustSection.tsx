@@ -52,23 +52,28 @@ export function TrustSection() {
         </div>
 
         {/* Real Metrics Banner */}
-        <div className="mt-8 pt-8 border-t border-border/60 flex flex-col xl:flex-row xl:items-center justify-between gap-6 text-center sm:text-left">
-          <div className="flex items-center justify-center sm:justify-start gap-2 text-xs font-semibold uppercase tracking-wider text-navy">
-            <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-            <span>Trusted by Professionals Across</span>
-          </div>
+        <div className="mt-10 pt-8 border-t border-border/70">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-8">
+            <div className="flex items-center justify-center lg:justify-start gap-2.5 text-xs font-bold uppercase tracking-wider text-navy shrink-0 lg:pr-8 lg:border-r border-border/70">
+              <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
+              <span>Trusted by Professionals Across</span>
+            </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 xl:flex xl:flex-wrap items-center justify-center sm:justify-start xl:justify-end gap-6 sm:gap-8 lg:gap-10">
-            {COMPANY_INFO.stats.map((stat) => (
-              <div key={stat.label}>
-                <div className="font-serif font-bold text-2xl sm:text-3xl text-navy">
-                  {stat.value}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 lg:gap-0 flex-1 lg:divide-x divide-border/70">
+              {COMPANY_INFO.stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="text-center px-2 lg:px-4 flex flex-col items-center justify-center"
+                >
+                  <div className="font-serif font-bold text-2xl sm:text-3xl text-navy">
+                    {stat.value}
+                  </div>
+                  <div className="text-[11px] sm:text-xs text-text-secondary font-medium mt-1 whitespace-nowrap">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-[11px] sm:text-xs text-text-secondary font-medium mt-0.5">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
