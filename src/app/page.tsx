@@ -3,8 +3,6 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { TrustSection } from "@/components/home/TrustSection";
 import { FeaturedProjectsSection } from "@/components/home/FeaturedProjectsSection";
 import { LocationExplorerSection } from "@/components/home/LocationExplorerSection";
-import { ServicesSection } from "@/components/home/ServicesSection";
-import { WhyChooseUsSection } from "@/components/home/WhyChooseUsSection";
 import { ProcessTimelineSection } from "@/components/home/ProcessTimelineSection";
 import { InsightsSection } from "@/components/home/InsightsSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
@@ -27,28 +25,22 @@ export default function HomePage() {
       {/* Section 4: Explore Pune by Location */}
       <LocationExplorerSection />
 
-      {/* Section 5: Advisory Services */}
-      <ServicesSection />
-
-      {/* Section 6: Why Work With Us */}
-      <WhyChooseUsSection />
-
-      {/* Section 7: How the Process Works */}
+      {/* Section 5: How the Process Works */}
       <ProcessTimelineSection />
 
-      {/* Section 8: Market Insights and Guides */}
+      {/* Section 6: Market Insights and Guides */}
       <InsightsSection />
 
-      {/* Section 9: Client Testimonials */}
+      {/* Section 7: Client Testimonials */}
       <TestimonialsSection />
 
-      {/* Section 10: Frequently Asked Questions */}
+      {/* Section 8: Frequently Asked Questions */}
       <FAQSection />
 
-      {/* Section 11: Flagship Kharadi Office & Google Map */}
+      {/* Section 9: Flagship Kharadi Office & Google Map */}
       <OfficeMapSection />
 
-      {/* Section 12: Final Call to Action */}
+      {/* Section 10: Final Call to Action */}
       <FinalCTASection />
     </>
   );
