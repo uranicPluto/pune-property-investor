@@ -151,6 +151,24 @@ test("Filtering by Ready to Move status isolates OC received developments", () =
   }
 });
 
+test("Configuration filter for '4 BHK' includes projects with 4 BHK and 5 BHK layouts", () => {
+  const largeUnits = PROJECTS.filter((p) =>
+    p.configurations.some((c) => c.startsWith("4") || c.startsWith("5"))
+  );
+  assert.ok(largeUnits.length >= 2, "Should find at least 2 developments with 4 BHK or 5 BHK");
+  for (const p of largeUnits) {
+    assert.ok(p.configurations.some((c) => c.includes("4 BHK") || c.includes("5 BHK")));
+  }
+});
+
+test("FAQ categories match expected buyer guidance themes", () => {
+  const expectedCategories = ["Buying Process", "Legal & RERA", "Advisory & Fees", "Investment & Locations"];
+  for (const cat of expectedCategories) {
+    const hasCategory = FAQS.some((f) => f.category === cat);
+    assert.ok(hasCategory, `Missing FAQ for category: ${cat}`);
+  }
+});
+
 console.log("\n==========================================");
 console.log(`RESULTS: ${passed} Passed, ${failed} Failed`);
 console.log("==========================================");

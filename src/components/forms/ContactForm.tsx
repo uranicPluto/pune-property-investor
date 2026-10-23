@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { CheckCircle2, AlertCircle, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
@@ -10,24 +11,41 @@ interface ContactFormProps {
   className?: string;
 }
 
-export function ContactForm({
+function ContactFormInner({
   initialServiceOrProject = "",
   initialType = "general_enquiry",
   className = "",
 }: ContactFormProps) {
+  const searchParams = useSearchParams();
+  const queryType = (searchParams.get("type") as ContactFormProps["initialType"]) || initialType;
+  const queryService = searchParams.get("service") || searchParams.get("project") || initialServiceOrProject;
+  const queryLocality = searchParams.get("locality") || "";
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
-    projectOrServiceOfInterest: initialServiceOrProject,
-    preferredLocality: "",
+    projectOrServiceOfInterest: queryService,
+    preferredLocality: queryLocality,
     budgetRange: "",
     preferredConfiguration: "",
     message: "",
-    enquiryType: initialType,
+    enquiryType: queryType,
     consent: true,
     websiteField_hp: "", // Honeypot
   });
+
+  useEffect(() => {
+    if (queryType) {
+      setFormData((prev) => ({ ...prev, enquiryType: queryType }));
+    }
+    if (queryService) {
+      setFormData((prev) => ({ ...prev, projectOrServiceOfInterest: queryService }));
+    }
+    if (queryLocality) {
+      setFormData((prev) => ({ ...prev, preferredLocality: queryLocality }));
+    }
+  }, [queryType, queryService, queryLocality]);
 
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string[]>>({});
@@ -348,5 +366,19 @@ export function ContactForm({
         </Button>
       </form>
     </div>
+  );
+}
+
+export function ContactForm(props: ContactFormProps) {
+  return (
+    <Suspense
+      fallback={
+        <div className="bg-white p-8 rounded-card border border-border shadow-soft text-center text-text-muted text-sm">
+          Loading consultation form...
+        </div>
+      }
+    >
+      <ContactFormInner {...props} />
+    </Suspense>
   );
 }

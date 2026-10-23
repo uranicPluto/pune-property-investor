@@ -43,12 +43,19 @@ export function FAQSection() {
         </div>
 
         {/* Category Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+        <div
+          role="tablist"
+          aria-label="FAQ categories"
+          className="flex flex-wrap items-center justify-center gap-2 mb-8"
+        >
           {categories.map((cat) => (
             <button
               key={cat}
+              type="button"
+              role="tab"
+              aria-selected={activeCategory === cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
                 activeCategory === cat
                   ? "bg-navy text-white shadow-soft"
                   : "bg-ivory text-text-secondary hover:text-navy hover:bg-border/60"
@@ -59,8 +66,8 @@ export function FAQSection() {
           ))}
         </div>
 
-        {/* Accordion Component */}
-        <Accordion items={accordionItems} />
+        {/* Accordion Component with key reset on category switch */}
+        <Accordion key={activeCategory} items={accordionItems} />
 
         {/* Contact Us Card */}
         <div className="mt-12 p-6 rounded-card bg-ivory border border-border/80 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">

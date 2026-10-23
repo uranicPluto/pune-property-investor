@@ -38,7 +38,7 @@ export const MAIN_NAV_ITEMS: NavItem[] = [
   },
   {
     label: "Locations",
-    href: "/projects",
+    href: "/locations",
     children: [
       {
         label: "Kharadi",

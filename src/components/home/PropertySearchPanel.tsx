@@ -29,11 +29,13 @@ export function PropertySearchPanel() {
       <form onSubmit={handleSearch} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 items-end">
         {/* Locality Selector */}
         <div className="space-y-1.5 text-left">
-          <label className="text-xs font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
+          <label htmlFor="search-locality" className="text-xs font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
             <MapPin className="w-3.5 h-3.5 text-gold" />
             <span>Locality</span>
           </label>
           <select
+            id="search-locality"
+            name="locality"
             value={locality}
             onChange={(e) => setLocality(e.target.value)}
             className="w-full bg-ivory/60 border border-border rounded-brand px-3 py-2.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-gold transition-shadow"
@@ -54,11 +56,13 @@ export function PropertySearchPanel() {
 
         {/* Property Type */}
         <div className="space-y-1.5 text-left">
-          <label className="text-xs font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
+          <label htmlFor="search-type" className="text-xs font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
             <Building className="w-3.5 h-3.5 text-gold" />
             <span>Property Type</span>
           </label>
           <select
+            id="search-type"
+            name="propertyType"
             value={propertyType}
             onChange={(e) => setPropertyType(e.target.value)}
             className="w-full bg-ivory/60 border border-border rounded-brand px-3 py-2.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-gold transition-shadow"
@@ -72,11 +76,13 @@ export function PropertySearchPanel() {
 
         {/* Configuration */}
         <div className="space-y-1.5 text-left">
-          <label className="text-xs font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
+          <label htmlFor="search-config" className="text-xs font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
             <Layers className="w-3.5 h-3.5 text-gold" />
             <span>Bedrooms</span>
           </label>
           <select
+            id="search-config"
+            name="configuration"
             value={configuration}
             onChange={(e) => setConfiguration(e.target.value)}
             className="w-full bg-ivory/60 border border-border rounded-brand px-3 py-2.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-gold transition-shadow"
@@ -91,11 +97,13 @@ export function PropertySearchPanel() {
 
         {/* Budget Range */}
         <div className="space-y-1.5 text-left">
-          <label className="text-xs font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
+          <label htmlFor="search-budget" className="text-xs font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
             <IndianRupee className="w-3.5 h-3.5 text-gold" />
             <span>Budget</span>
           </label>
           <select
+            id="search-budget"
+            name="budget"
             value={budget}
             onChange={(e) => setBudget(e.target.value)}
             className="w-full bg-ivory/60 border border-border rounded-brand px-3 py-2.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-gold transition-shadow"

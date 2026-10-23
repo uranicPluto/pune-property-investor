@@ -7,7 +7,7 @@ import { RevealUp } from "@/components/motion/MotionWrapper";
 
 export function TestimonialsSection() {
   const featured = TESTIMONIALS[0];
-  const supporting = TESTIMONIALS.slice(1, 4);
+  const supporting = TESTIMONIALS.slice(1, 5);
 
   return (
     <section className="py-20 lg:py-28 bg-ivory/60 border-t border-border/80">
@@ -67,7 +67,7 @@ export function TestimonialsSection() {
           </div>
 
           {/* Supporting Testimonial Cards */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
             {supporting.map((test, index) => (
               <RevealUp
                 key={test.id}

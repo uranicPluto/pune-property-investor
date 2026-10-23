@@ -102,8 +102,14 @@ export function ProjectFilters({ initialProjects }: ProjectFiltersProps) {
         return false;
       }
       // Configuration
-      if (config && !project.configurations.some((c) => c.toLowerCase() === config.toLowerCase())) {
-        return false;
+      if (config) {
+        if (config === "4 BHK" || config === "4 BHK+") {
+          if (!project.configurations.some((c) => c.startsWith("4") || c.startsWith("5"))) {
+            return false;
+          }
+        } else if (!project.configurations.some((c) => c.toLowerCase() === config.toLowerCase())) {
+          return false;
+        }
       }
       // Budget Range
       if (budget) {

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck, PhoneCall, Sparkles } from "lucide-react";
+import { ArrowRight, PhoneCall, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { PropertySearchPanel } from "./PropertySearchPanel";
 import { RevealUp, FadeIn } from "@/components/motion/MotionWrapper";
@@ -20,8 +20,8 @@ export function HeroSection() {
           sizes="100vw"
           className="object-cover object-center opacity-35 scale-105 animate-in fade-in zoom-in-95 duration-1000"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/70 to-navy-dark/90" />
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-navy-dark/40 to-navy-dark" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/70 to-navy-dark/90 pointer-events-none" />
+        <div className="absolute inset-0 [background:radial-gradient(ellipse_at_center,_transparent_0%,_rgba(11,25,41,0.6)_100%)] pointer-events-none" />
       </div>
 
       {/* Main Hero Content */}

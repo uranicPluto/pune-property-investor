@@ -29,7 +29,7 @@ export function LocationExplorerSection() {
           </div>
 
           <Link
-            href="/locations/kharadi"
+            href="/locations"
             className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-gold transition-colors shrink-0 group self-start md:self-end"
           >
             <span>View All Locality Guides</span>
@@ -98,9 +98,9 @@ export function LocationExplorerSection() {
             </RevealUp>
           </div>
 
-          {/* Supporting Grid of 4-5 Localities */}
+          {/* Supporting Grid of 4 Localities */}
           <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-5">
-            {supportingLocalities.slice(0, 3).map((loc, idx) => (
+            {supportingLocalities.slice(0, 4).map((loc, idx) => (
               <RevealUp key={loc.id} delay={idx * 0.1}>
                 <Link
                   href={`/locations/${loc.slug}`}

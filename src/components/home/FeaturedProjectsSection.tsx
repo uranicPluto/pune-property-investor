@@ -46,7 +46,11 @@ export function FeaturedProjectsSection() {
         </div>
 
         {/* Tab Filters */}
-        <div className="flex flex-wrap items-center gap-2 mb-8 border-b border-border/80 pb-4">
+        <div
+          role="tablist"
+          aria-label="Project category filters"
+          className="flex flex-wrap items-center gap-2 mb-8 border-b border-border/80 pb-4"
+        >
           {[
             { id: "all", label: "All Developments" },
             { id: "luxury", label: "Ultra-Luxury & Riverfront" },
@@ -55,6 +59,9 @@ export function FeaturedProjectsSection() {
           ].map((tab) => (
             <button
               key={tab.id}
+              type="button"
+              role="tab"
+              aria-selected={activeTab === tab.id}
               onClick={() => setActiveTab(tab.id as typeof activeTab)}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                 activeTab === tab.id
@@ -68,13 +75,26 @@ export function FeaturedProjectsSection() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredProjects.slice(0, 6).map((project) => (
-            <div key={project.id} className="h-full">
-              <ProjectCard project={project} />
-            </div>
-          ))}
-        </div>
+        {filteredProjects.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {filteredProjects.slice(0, 6).map((project) => (
+              <div key={project.id} className="h-full">
+                <ProjectCard project={project} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12 bg-ivory/60 rounded-card border border-border/80 p-8 space-y-3">
+            <p className="text-navy font-serif font-bold text-lg">No developments currently match this filter.</p>
+            <button
+              type="button"
+              onClick={() => setActiveTab("all")}
+              className="text-xs font-semibold text-gold-dark hover:underline"
+            >
+              Reset to all developments
+            </button>
+          </div>
+        )}
 
         {/* Bottom Banner Note */}
         <div className="mt-14 p-6 sm:p-8 rounded-card bg-ivory border border-border/80 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
