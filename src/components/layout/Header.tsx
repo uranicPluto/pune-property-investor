@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, Phone, MessageSquare, ArrowUpRight } from "lucide-react";
+import { ChevronDown, Menu, ArrowUpRight } from "lucide-react";
 import { MAIN_NAV_ITEMS } from "@/data/navigation";
 import { COMPANY_INFO } from "@/data/company";
 import { Button } from "@/components/ui/Button";
@@ -167,28 +167,6 @@ export function Header() {
 
           {/* Right Action Area */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href={COMPANY_INFO.whatsapp.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Chat on WhatsApp (+91 73981 74444)"
-              className="text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30"
-            >
-              <MessageSquare className="w-3.5 h-3.5" />
-              <span className="hidden xl:inline">WhatsApp</span>
-            </a>
-
-            <a
-              href={`tel:${COMPANY_INFO.phones.primaryRaw}`}
-              aria-label="Call primary phone"
-              className="text-white/80 hover:text-gold transition-colors flex items-center gap-2 text-sm font-medium"
-            >
-              <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gold">
-                <Phone className="w-4 h-4" />
-              </span>
-              <span className="hidden xl:inline">{COMPANY_INFO.phones.primary}</span>
-            </a>
-
             <Button
               href="/contact-us?type=advisory_call"
               variant="primary"
@@ -198,26 +176,8 @@ export function Header() {
             </Button>
           </div>
 
-          {/* Mobile Actions: WhatsApp, Phone & Hamburger */}
-          <div className="flex items-center gap-2.5 lg:hidden">
-            <a
-              href={COMPANY_INFO.whatsapp.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Chat on WhatsApp (+91 73981 74444)"
-              className="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center hover:bg-emerald-500/30 transition-colors"
-            >
-              <MessageSquare className="w-4 h-4" />
-            </a>
-
-            <a
-              href={`tel:${COMPANY_INFO.phones.primaryRaw}`}
-              aria-label="Call Phone"
-              className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gold hover:bg-white/20 transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-            </a>
-
+          {/* Mobile Hamburger Button */}
+          <div className="flex items-center gap-3 lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open mobile menu"
