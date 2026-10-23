@@ -1,0 +1,58 @@
+export const COMPANY_INFO = {
+  name: "Pune Property Investor",
+  legalName: "Pune Property Investor Real Estate Advisory",
+  tagline: "Strategic Real Estate Advisory for Discerning Buyers & Investors in Pune",
+  shortAbout:
+    "Pune Property Investor is a premier real estate consultancy headquartered in Kharadi, Pune. We provide unbiased, data-backed advisory to homebuyers, NRI investors, and commercial seekers across Pune's top growth corridors.",
+  phones: {
+    primary: "+91 73981 74444",
+    primaryRaw: "+917398174444",
+    secondary: "+91 99220 39898",
+    secondaryRaw: "+919922039898",
+  },
+  whatsapp: {
+    number: "+917398174444",
+    link: "https://wa.me/917398174444?text=Hello%20Pune%20Property%20Investor%2C%20I%20would%20like%20to%20enquire%20about%20residential%20projects%20in%20Pune.",
+  },
+  email: "info@punepropertyinvestor.com",
+  officeAddress: {
+    street: "3rd Floor, Gera Imperium Alpha, Grant Road, Vitthal Nagar",
+    locality: "Kharadi",
+    city: "Pune",
+    state: "Maharashtra",
+    postalCode: "411014",
+    country: "India",
+    full: "3rd Floor, Gera Imperium Alpha, Grant Rd, Vitthal Nagar, Kharadi, Pune, Maharashtra 411014",
+    googleMapsUrl: "https://maps.google.com/?q=Gera+Imperium+Alpha+Kharadi+Pune",
+  },
+  businessHours: "Monday to Sunday: 9:30 AM – 7:30 PM IST",
+  socials: {
+    facebook: "https://www.facebook.com/punepropertyinvestors/",
+    instagram: "https://www.instagram.com/punepropertyinvestor/",
+    linkedin: "https://www.linkedin.com/company/pune-property-investor1/",
+    twitter: "https://x.com/pune_investors",
+    youtube: "https://www.youtube.com/@PunePropertyInvestor",
+  },
+  accreditations: {
+    role: "Authorized Real Estate Channel Partner & Investment Advisory",
+    reraNote: "Operating strictly in compliance with Maharashtra Real Estate Regulatory Authority (MahaRERA) guidelines. Project RERA registration numbers are displayed on individual project profiles.",
+  },
+  developerPartners: [
+    "Mantra Properties",
+    "Tribeca Developers",
+    "Gera Developments",
+    "VTP Realty",
+    "Kohinoor Group",
+    "Godrej Properties",
+    "Kolte-Patil Developers",
+    "Trustfort Realty",
+    "Rohan Builders",
+    "Panchshil Realty",
+  ],
+  stats: [
+    { label: "Prime Pune Localities", value: "10+" },
+    { label: "Curated Developments", value: "45+" },
+    { label: "Homebuyers & Investors Guided", value: "1,200+" },
+    { label: "Client Recommendation Rate", value: "98%" },
+  ],
+};
