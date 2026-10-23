@@ -47,6 +47,46 @@ const CUSTOMER_MOMENTS = [
     tag: "Belmont Skyverse",
     metric: "Skyline Suite",
   },
+  {
+    image: "/images/customers/customer-handover-6.jpg",
+    title: "Excellaa Platina Collection Celebration",
+    description:
+      "Happy buyers receiving their premium hamper and booking terms at Excellaa Platina Collection.",
+    tag: "The Platina Collection",
+    metric: "Excellaa Residences",
+  },
+  {
+    image: "/images/customers/customer-handover-7.png",
+    title: "Godrej Rivergreens Family Handover",
+    description:
+      "Family with toddler receiving their new home documentation at Godrej Rivergreens lounge.",
+    tag: "Godrej Rivergreens",
+    metric: "Township Lifestyle",
+  },
+  {
+    image: "/images/customers/customer-handover-8.jpg",
+    title: "Welcome to Godrej Family Handover",
+    description:
+      "Proud homeowners celebrated with flowers and documentation kit at Godrej Properties desk.",
+    tag: "Godrej Properties",
+    metric: "Brand Partner",
+  },
+  {
+    image: "/images/customers/customer-handover-9.jpg",
+    title: "BramhaCorp Luxury Allotment",
+    description:
+      "Clients sealing their luxury Pune investment at BramhaCorp corporate headquarters.",
+    tag: "BramhaCorp Luxury",
+    metric: "Prime Advisory",
+  },
+  {
+    image: "/images/customers/customer-handover-10.jpg",
+    title: "F5 Mindspace Residency Ceremony",
+    description:
+      "Full family celebrating their apartment handover at F5 Realtors Mindspace Residency.",
+    tag: "Mindspace Residency",
+    metric: "F5 Realtors",
+  },
 ];
 
 export function HappyCustomersSection() {
