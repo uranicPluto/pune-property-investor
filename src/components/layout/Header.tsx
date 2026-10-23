@@ -8,7 +8,6 @@ import { MAIN_NAV_ITEMS } from "@/data/navigation";
 import { COMPANY_INFO } from "@/data/company";
 import { Button } from "@/components/ui/Button";
 import { MobileNavigation } from "./MobileNavigation";
-import { AnnouncementBar } from "./AnnouncementBar";
 
 export function Header() {
   const pathname = usePathname();
@@ -60,8 +59,6 @@ export function Header() {
 
   return (
     <>
-      <AnnouncementBar />
-
       <header
         ref={navRef}
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
