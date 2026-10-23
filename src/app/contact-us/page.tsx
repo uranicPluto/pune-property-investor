@@ -4,6 +4,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, ShieldCheck, ExternalLink } 
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { COMPANY_INFO } from "@/data/company";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { OfficeMapSection } from "@/components/common/OfficeMapSection";
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
@@ -150,6 +151,11 @@ export default function ContactPage() {
               <ContactForm initialType="general_enquiry" />
             </Suspense>
           </div>
+        </div>
+
+        {/* Embedded Interactive Google Map Section */}
+        <div className="pt-6">
+          <OfficeMapSection showIntro={false} className="py-0 border-t-0 bg-transparent" />
         </div>
       </div>
     </div>

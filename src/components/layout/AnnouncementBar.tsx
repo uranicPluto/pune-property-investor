@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight, MessageSquare } from "lucide-react";
 
 export function AnnouncementBar() {
   return (
@@ -23,6 +23,16 @@ export function AnnouncementBar() {
             <span>Book Guided Site Visit</span>
             <ArrowRight className="w-3 h-3" />
           </Link>
+          <span className="text-white/30">|</span>
+          <a
+            href="https://wa.me/917398174444?text=Hello%20Pune%20Property%20Investor%2C%20I%20would%20like%20to%20enquire%20about%20residential%20projects%20in%20Pune."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-emerald-400 text-emerald-400 transition-colors font-medium inline-flex items-center gap-1"
+          >
+            <MessageSquare className="w-3 h-3" />
+            <span>WhatsApp: 73981 74444</span>
+          </a>
           <span className="text-white/30">|</span>
           <a
             href="tel:+917398174444"

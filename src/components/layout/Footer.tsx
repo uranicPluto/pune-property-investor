@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   MapPin,
   Phone,
+  MessageSquare,
   Mail,
   Clock,
   ShieldCheck,
@@ -74,6 +75,18 @@ export function Footer() {
                     {COMPANY_INFO.phones.secondary}
                   </a>
                 </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
+                <a
+                  href={COMPANY_INFO.whatsapp.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-emerald-300 text-emerald-400 transition-colors font-medium"
+                >
+                  WhatsApp: +91 73981 74444
+                </a>
               </div>
 
               <div className="flex items-center gap-3">

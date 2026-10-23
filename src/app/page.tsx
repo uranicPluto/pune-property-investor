@@ -9,6 +9,7 @@ import { ProcessTimelineSection } from "@/components/home/ProcessTimelineSection
 import { InsightsSection } from "@/components/home/InsightsSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FAQSection } from "@/components/home/FAQSection";
+import { OfficeMapSection } from "@/components/common/OfficeMapSection";
 import { FinalCTASection } from "@/components/home/FinalCTASection";
 
 export default function HomePage() {
@@ -44,7 +45,10 @@ export default function HomePage() {
       {/* Section 10: Frequently Asked Questions */}
       <FAQSection />
 
-      {/* Section 11: Final Call to Action */}
+      {/* Section 11: Flagship Kharadi Office & Google Map */}
+      <OfficeMapSection />
+
+      {/* Section 12: Final Call to Action */}
       <FinalCTASection />
     </>
   );
