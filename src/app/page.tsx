@@ -6,7 +6,6 @@ import { HomeAboutSection } from "@/components/home/HomeAboutSection";
 import { HappyCustomersSection } from "@/components/home/HappyCustomersSection";
 import { LocationExplorerSection } from "@/components/home/LocationExplorerSection";
 import { ProcessTimelineSection } from "@/components/home/ProcessTimelineSection";
-import { InsightsSection } from "@/components/home/InsightsSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { OfficeMapSection } from "@/components/common/OfficeMapSection";
@@ -36,19 +35,16 @@ export default function HomePage() {
       {/* Section 7: How the Process Works */}
       <ProcessTimelineSection />
 
-      {/* Section 8: Market Insights and Guides */}
-      <InsightsSection />
-
-      {/* Section 9: Client Testimonials */}
+      {/* Section 8: Client Testimonials */}
       <TestimonialsSection />
 
-      {/* Section 10: Frequently Asked Questions */}
+      {/* Section 9: Frequently Asked Questions */}
       <FAQSection />
 
-      {/* Section 11: Flagship Kharadi Office & Google Map */}
+      {/* Section 10: Flagship Kharadi Office & Google Map */}
       <OfficeMapSection />
 
-      {/* Section 12: Final Call to Action */}
+      {/* Section 11: Final Call to Action */}
       <FinalCTASection />
     </>
   );
