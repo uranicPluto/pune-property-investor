@@ -6,7 +6,7 @@ import { RevealUp } from "@/components/motion/MotionWrapper";
 
 export function HomeAboutSection() {
   return (
-    <section className="py-14 sm:py-20 bg-white">
+    <section className="pt-2 pb-14 sm:pt-4 sm:pb-20 bg-white">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Heading */}
         <RevealUp className="text-center mb-8 sm:mb-10">
