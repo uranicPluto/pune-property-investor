@@ -2,7 +2,6 @@ import React from "react";
 import { ShieldCheck, Building2, MapPin, Award, CheckCircle2 } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { RevealUp } from "@/components/motion/MotionWrapper";
-import { WorkflowTimeline } from "./WorkflowTimeline";
 
 export function TrustSection() {
   const principles = [
@@ -72,9 +71,6 @@ export function TrustSection() {
             ))}
           </div>
         </div>
-
-        {/* 7-Step Elevated Advisory Workflow */}
-        <WorkflowTimeline />
       </div>
     </section>
   );
