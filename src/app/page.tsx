@@ -5,7 +5,6 @@ import { FeaturedProjectsSection } from "@/components/home/FeaturedProjectsSecti
 import { LocationExplorerSection } from "@/components/home/LocationExplorerSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { WhyChooseUsSection } from "@/components/home/WhyChooseUsSection";
-import { ProcessTimelineSection } from "@/components/home/ProcessTimelineSection";
 import { InsightsSection } from "@/components/home/InsightsSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FAQSection } from "@/components/home/FAQSection";
@@ -33,10 +32,7 @@ export default function HomePage() {
       {/* Section 6: Why Work With Us */}
       <WhyChooseUsSection />
 
-      {/* Section 7: How the Process Works */}
-      <ProcessTimelineSection />
-
-      {/* Section 8: Market Insights and Guides */}
+      {/* Section 7: Market Insights and Guides */}
       <InsightsSection />
 
       {/* Section 9: Client Testimonials */}
