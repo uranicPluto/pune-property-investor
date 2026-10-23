@@ -95,25 +95,6 @@ export function FeaturedProjectsSection() {
             </button>
           </div>
         )}
-
-        {/* Bottom Banner Note */}
-        <div className="mt-14 p-6 sm:p-8 rounded-card bg-ivory border border-border/80 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-          <div>
-            <h3 className="font-serif font-bold text-lg sm:text-xl text-navy">
-              Looking for a specific configuration or pre-launch opportunity?
-            </h3>
-            <p className="text-xs sm:text-sm text-text-secondary mt-1">
-              Our Kharadi advisory team tracks 45+ upcoming towers before public launches.
-            </p>
-          </div>
-          <Link
-            href="/contact-us?type=general_enquiry"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-brand bg-navy text-white text-xs sm:text-sm font-semibold hover:bg-navy-light transition-colors shrink-0"
-          >
-            <span>Request Tailored Shortlist</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
       </div>
     </section>
   );

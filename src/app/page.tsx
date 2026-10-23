@@ -2,6 +2,7 @@ import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustSection } from "@/components/home/TrustSection";
 import { FeaturedProjectsSection } from "@/components/home/FeaturedProjectsSection";
+import { HomeAboutSection } from "@/components/home/HomeAboutSection";
 import { LocationExplorerSection } from "@/components/home/LocationExplorerSection";
 import { ProcessTimelineSection } from "@/components/home/ProcessTimelineSection";
 import { InsightsSection } from "@/components/home/InsightsSection";
@@ -22,25 +23,28 @@ export default function HomePage() {
       {/* Section 3: Featured Projects */}
       <FeaturedProjectsSection />
 
-      {/* Section 4: Explore Pune by Location */}
+      {/* Section 4: About Us */}
+      <HomeAboutSection />
+
+      {/* Section 5: Explore Pune by Location */}
       <LocationExplorerSection />
 
-      {/* Section 5: How the Process Works */}
+      {/* Section 6: How the Process Works */}
       <ProcessTimelineSection />
 
-      {/* Section 6: Market Insights and Guides */}
+      {/* Section 7: Market Insights and Guides */}
       <InsightsSection />
 
-      {/* Section 7: Client Testimonials */}
+      {/* Section 8: Client Testimonials */}
       <TestimonialsSection />
 
-      {/* Section 8: Frequently Asked Questions */}
+      {/* Section 9: Frequently Asked Questions */}
       <FAQSection />
 
-      {/* Section 9: Flagship Kharadi Office & Google Map */}
+      {/* Section 10: Flagship Kharadi Office & Google Map */}
       <OfficeMapSection />
 
-      {/* Section 10: Final Call to Action */}
+      {/* Section 11: Final Call to Action */}
       <FinalCTASection />
     </>
   );
