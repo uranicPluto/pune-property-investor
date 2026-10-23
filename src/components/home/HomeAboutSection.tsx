@@ -1,123 +1,67 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, CheckCircle2, Award, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { RevealUp } from "@/components/motion/MotionWrapper";
 
 export function HomeAboutSection() {
   return (
-    <section className="py-16 sm:py-24 bg-ivory border-y border-border/80">
+    <section className="py-14 sm:py-20 bg-white">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Editorial & Story */}
-          <RevealUp className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-border text-xs font-bold uppercase tracking-wider text-gold shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-gold" />
-              <span>About Pune Property Investor</span>
-            </div>
+        {/* Centered Heading */}
+        <RevealUp className="text-center mb-8 sm:mb-10">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy tracking-tight">
+            About Us
+          </h2>
+          <div className="w-12 h-0.5 bg-gold mx-auto mt-3 rounded-full" />
+        </RevealUp>
 
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy tracking-tight leading-tight">
-              Your Trusted Partner in Real Estate
-            </h2>
+        {/* Wide Panoramic Team Banner with Text Overlay */}
+        <RevealUp delay={0.1}>
+          <div className="relative rounded-card overflow-hidden shadow-floating border border-border/80 min-h-[380px] sm:min-h-[460px] lg:min-h-[500px] flex items-center justify-center p-6 sm:p-12 lg:p-16">
+            {/* Real Pune Property Investor Team Photo */}
+            <Image
+              src="/images/ppi-group-photo.jpeg"
+              alt="Pune Property Investor Team at Flagship Kharadi Headquarters"
+              fill
+              priority
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              className="object-cover object-[center_35%]"
+            />
 
-            <p className="text-text-primary text-base sm:text-lg leading-relaxed font-sans">
-              Welcome to Pune Property Investor, your trusted partner in real estate. We are a leading
-              real estate company dedicated to providing exceptional services and delivering
-              outstanding results to our valued clients. With our extensive industry knowledge,
-              professional expertise, and unwavering commitment, we strive to exceed expectations
-              and make your real estate journey seamless and rewarding.
-            </p>
+            {/* Contrast-enhancing dark gradient overlay for optimal legibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/70 to-navy-dark/80" />
 
-            {/* Three Pillar Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
-              <div className="bg-white p-4 rounded-brand border border-border/70 shadow-soft">
-                <div className="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center text-gold-dark mb-2.5">
-                  <ShieldCheck className="w-4 h-4" />
-                </div>
-                <h4 className="font-sans font-bold text-xs sm:text-sm text-navy">
-                  Industry Knowledge
-                </h4>
-                <p className="text-[11px] sm:text-xs text-text-secondary mt-1 leading-relaxed">
-                  Deep intelligence across Pune&apos;s prime growth corridors.
-                </p>
-              </div>
+            {/* Overlaid About Us Content */}
+            <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+              <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed sm:leading-loose font-sans font-normal tracking-wide drop-shadow-md">
+                Welcome to Pune Property Investor, your trusted partner in real estate. We are a
+                leading real estate company dedicated to providing exceptional services and
+                delivering outstanding results to our valued clients. With our extensive industry
+                knowledge, professional expertise, and unwavering commitment, we strive to exceed
+                expectations and make your real estate journey seamless and rewarding.
+              </p>
 
-              <div className="bg-white p-4 rounded-brand border border-border/70 shadow-soft">
-                <div className="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center text-gold-dark mb-2.5">
-                  <Award className="w-4 h-4" />
-                </div>
-                <h4 className="font-sans font-bold text-xs sm:text-sm text-navy">
-                  Professional Expertise
-                </h4>
-                <p className="text-[11px] sm:text-xs text-text-secondary mt-1 leading-relaxed">
-                  MahaRERA verified guidance with zero buyer brokerage.
-                </p>
-              </div>
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+                <Link
+                  href="/about-us"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-brand bg-gold text-white text-xs sm:text-sm font-semibold hover:bg-gold-dark transition-colors shadow-soft"
+                >
+                  <span>Learn More About Us</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
 
-              <div className="bg-white p-4 rounded-brand border border-border/70 shadow-soft">
-                <div className="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center text-gold-dark mb-2.5">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <h4 className="font-sans font-bold text-xs sm:text-sm text-navy">
-                  Unwavering Commitment
-                </h4>
-                <p className="text-[11px] sm:text-xs text-text-secondary mt-1 leading-relaxed">
-                  End-to-end transparency from site visit to final handover.
-                </p>
+                <Link
+                  href="/contact-us"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-brand bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold border border-white/30 backdrop-blur-sm transition-colors"
+                >
+                  <span>Book Free Consultation</span>
+                </Link>
               </div>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-3">
-              <Link
-                href="/about-us"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-brand bg-navy text-white text-xs sm:text-sm font-semibold hover:bg-navy-light transition-colors shadow-soft"
-              >
-                <span>Discover More About Us</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-
-              <Link
-                href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-brand bg-white border border-border text-navy text-xs sm:text-sm font-semibold hover:bg-gray-50 transition-colors"
-              >
-                <span>Book Consultation</span>
-              </Link>
-            </div>
-          </RevealUp>
-
-          {/* Right Column: Visual Feature */}
-          <RevealUp delay={0.15} className="lg:col-span-5">
-            <div className="relative aspect-[4/5] rounded-card overflow-hidden shadow-card border border-border">
-              <Image
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
-                alt="Pune Property Investor - Flagship Advisory Office in Kharadi, Pune"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/30 to-transparent" />
-
-              <div className="absolute bottom-5 left-5 right-5 p-4 sm:p-5 rounded-brand bg-white/95 backdrop-blur-md border border-white/30 text-navy shadow-floating">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs font-bold text-gold uppercase tracking-wider">
-                    <ShieldCheck className="w-4 h-4" />
-                    <span>Advisory Headquarters</span>
-                  </div>
-                  <span className="text-[11px] font-bold text-navy bg-ivory px-2 py-0.5 rounded-full border border-border">
-                    Kharadi
-                  </span>
-                </div>
-                <div className="font-serif font-bold text-base sm:text-lg text-navy mt-1.5">
-                  Gera Imperium Alpha
-                </div>
-                <p className="text-xs text-text-secondary mt-0.5">
-                  Grant Road, Vitthal Nagar, Kharadi, Pune, Maharashtra 411014
-                </p>
-              </div>
-            </div>
-          </RevealUp>
-        </div>
+          </div>
+        </RevealUp>
       </div>
     </section>
   );

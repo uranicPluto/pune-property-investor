@@ -77,12 +77,12 @@ export default function AboutUsPage() {
 
           <div className="lg:col-span-5 relative aspect-[4/5] rounded-card overflow-hidden shadow-card border border-border">
             <Image
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
-              alt="Gera Imperium Alpha Kharadi - Pune Property Investor Headquarters"
+              src="/images/ppi-group-photo.jpeg"
+              alt="Pune Property Investor Advisory Team at Gera Imperium Alpha Kharadi"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover"
+              className="object-cover object-[center_35%]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/30 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 p-4 rounded-brand bg-white/90 backdrop-blur-md border border-white/20 text-navy">
